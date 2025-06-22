@@ -2,8 +2,8 @@ API tester for super-admin
 ============================
 
 [![StyleCI](https://styleci.io/repos/457879925/shield?branch=main)](https://styleci.io/repos/99563385)
-[![Packagist](https://img.shields.io/github/license/super-admin-org/api-tester.svg?maxAge=2592000&style=flat-square&color=brightgreen)](https://packagist.org/packages/super-admin-ext/api-tester)
-[![Total Downloads](https://img.shields.io/packagist/dt/super-admin-ext/api-tester.svg?style=flat-square&color=brightgreen)](https://packagist.org/packages/super-admin-admin-ext/api-tester)
+[![Packagist](https://img.shields.io/github/license/super-admin-org/api-tester.svg?maxAge=2592000&style=flat-square&color=brightgreen)](https://packagist.org/packages/super-admin-org/api-tester)
+[![Total Downloads](https://img.shields.io/packagist/dt/super-admin-org/api-tester.svg?style=flat-square&color=brightgreen)](https://packagist.org/packages/super-admin-admin-ext/api-tester)
 [![Pull request welcome](https://img.shields.io/badge/pr-welcome-green.svg?style=flat-square&color=brightgreen)]()
 
 [Documentation](http://super-admin.org/docs/en/extension-api-tester)
@@ -16,7 +16,7 @@ API tester for super-admin
 ## Installation
 
 ```
-$ composer require super-admin-ext/api-tester
+$ composer require super-admin-org/api-tester
 
 $ php artisan vendor:publish --tag=api-tester
 
