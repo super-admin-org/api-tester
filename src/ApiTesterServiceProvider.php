@@ -18,7 +18,7 @@ class ApiTesterServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes(
                 [__DIR__.'/../resources/assets/' => public_path('vendor/api-tester')],
-                'api-tester'
+                ['api-tester', 'laravel-assets']
             );
         }
 
