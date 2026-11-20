@@ -52,13 +52,11 @@
                 <form action="#" method="post">
                     <div class="input-group">
                         <input type="text" name="message" placeholder="Type Url ..." class="form-control filter-routes">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-primary btn-flat"><i class="icon-search"></i></button>
-                        </span>
+                        <button type="button" class="btn btn-primary"><i class="icon-search"></i></button>
                     </div>
                 </form>
 
-                <ul class="nav nav-pills nav-stacked routes" style="margin-top: 5px;">
+                <ul class="nav nav-pills flex-column routes" style="margin-top: 5px;">
                     @foreach($routes as $route)
                         @php ($color = SuperAdmin\Admin\ApiTester\ApiTester::$methodColors[$route['method']])
                         <li class="route-item w-100"
@@ -88,7 +86,7 @@
 
         <div class="card">
 
-            <form id="api-tester-form" method="post" class="form-horizontal api-tester-form"  enctype="multipart/form-data" autocomplete="off" action="{{ route('api-tester-handle') }}">
+            <form id="api-tester-form" method="post" class="api-tester-form"  enctype="multipart/form-data" autocomplete="off" action="{{ route('api-tester-handle') }}">
                 <div class="card-header"><h2 class="">Request</h2></div>
                 <div class="card-body">
 
@@ -97,9 +95,7 @@
 
                         <div class="col-sm-10">
                             <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <a class="input-group-text method">method</a>
-                                </div>
+                                <a class="input-group-text method">method</a>
                                 <input type="text" name="uri" class="form-control uri">
                                 <input type="hidden" name="method" class="form-control method">
                                 {{ csrf_field() }}
@@ -127,7 +123,7 @@
 
                 </div>
                   <div class="card-footer" style="margin-bottom: 0px;">
-                        <div class="col-sm-offset-2 col-sm-10">
+                        <div class="offset-sm-2 col-sm-10">
                             <button type="submit" class="btn btn-primary">Send</button>
                         </div>
                     </div>
@@ -136,11 +132,11 @@
         </div>
 
         <div class="card mt-5">
-            <div class="nav-tabs-custom response-tabs d-none">
+            <div class="response-tabs d-none">
                 <ul class="nav nav-tabs">
                     <li class="nav-item "><a class="nav-link active" data-bs-target="#content" aria-controls="content" data-bs-toggle="tab">Content</a></li>
                     <li class="nav-item "><a class="nav-link " data-bs-target="#headers" aria-controls="header" data-bs-toggle="tab">Headers</a></li>
-                    {{--<li><a href="#cookies" data-toggle="tab">Cookies</a></li>--}}
+                    {{--<li><a href="#cookies" data-bs-toggle="tab">Cookies</a></li>--}}
                     <li class="nav-item"><a class="nav-link response-status"></a></li>
                 </ul>
                 <div class="tab-content card-body">
@@ -169,7 +165,7 @@
 
 <template class="param-tpl">
 
-    <div class="form-inline param d-flex">
+    <div class="param d-flex align-items-center gap-2 mb-2">
 
         <div class="form-group me-2">
             <input type="text" name="key[__index__]" class="form-control param-key" style="width: 120px" placeholder="Key"/>
@@ -177,9 +173,7 @@
         <div class="form-group">
             <div class="input-group">
                 <input type="text" name="val[__index__]" class="form-control param-val" style="width: 280px"  placeholder="value"/>
-                <span class="input-group-btn">
-                  <a type="button" class="btn btn-default btn-light change-val-type"><i class="icon-upload"></i></a>
-                </span>
+                <a type="button" class="btn btn-light change-val-type"><i class="icon-upload"></i></a>
             </div>
         </div>
 
@@ -190,7 +184,7 @@
         <div class="form-group param-desc hide p-2">
             <i class="icon-info-circle"></i>&nbsp;
             <span class="text"></span>
-            <b class="text-red hide param-required">*</b>
+            <b class="text-danger hide param-required">*</b>
         </div>
     </div>
 
