@@ -3,7 +3,12 @@
     "description": "Api tester for super-admin",
     "type": "library",
     "keywords": ["super-admin", "api", "tester"],
-    "homepage": "https://github.com/super-admin-org/api-tester",
+    "homepage": "https://super-admin.org/laravel/extension-api-tester/",
+    "support": {
+        "docs": "https://super-admin.org/laravel/extension-api-tester/",
+        "issues": "https://github.com/super-admin-org/api-tester/issues",
+        "source": "https://github.com/super-admin-org/api-tester"
+    },
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +18,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "super-admin-org/super-admin": "^1.0"
+        "super-admin-org/super-admin": "^1.0|^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": ">=6.0",
